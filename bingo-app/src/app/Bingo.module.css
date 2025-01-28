@@ -1,0 +1,158 @@
+.pageContainer {
+  margin: 0;
+  padding: 0;
+  background-color: #2e2e2e;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* No scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+/* The top bar is a fixed height (say 15% of screen). */
+.topBar {
+  background-color: #000;
+  height: 15%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The row of previous calls on the far left. */
+.previousCalls {
+  position: absolute;
+  left: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* The small previous-call circles. */
+.prevCircle {
+  width: 4vw;
+  height: 4vw;
+  min-width: 50px; /* fallback if viewport is very narrow */
+  min-height: 50px;
+  max-width: 80px; /* some upper bound */
+  max-height: 80px;
+  background-color: #996515; /* a brownish fade */
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Big circle for current call. */
+.currentCircle {
+  width: 8vw;
+  height: 8vw;
+  min-width: 80px;
+  min-height: 80px;
+  max-width: 160px;
+  max-height: 160px;
+  background-color: #ffa500; /* bright orange */
+  border-radius: 50%;
+  color: #000;
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Settings gear on the far right. */
+.settingsToggle {
+  position: absolute;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* The panel that appears near the toggle. */
+.settingsPanel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #333;
+  border: 1px solid #444;
+  padding: 0.5rem;
+  z-index: 5;
+  color: #fff;
+  width: 200px;
+  border-radius: 4px;
+}
+
+/* Each line: label + input/select. */
+.settingsLine {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.settingsLine label {
+  margin-right: 0.4rem;
+}
+
+.settingsLine select,
+.settingsLine input {
+  background: #555;
+  border: 1px solid #777;
+  color: #fff;
+  width: 60px;
+  text-align: center;
+}
+
+.settingsButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settingsButtons button {
+  background: #ffa500;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* The board occupies the remaining 85% vertical space. */
+.board {
+  flex: 1;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(15, 1fr);
+  gap: 0.2vw; /* small gap between cells */
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+/* Un‐called cell. */
+.boardCell {
+  background-color: #444;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw;
+  font-weight: bold;
+  /* Sizing depends on the grid, but the circle will fill the cell. */
+}
+
+/* Called cell highlight. */
+.boardCellCalled {
+  background-color: #ffc107;
+  border-radius: 50%;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
