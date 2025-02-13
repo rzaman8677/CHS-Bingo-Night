@@ -129,6 +129,10 @@ export default function BingoPage() {
                 <option>C</option>
                 <option>H</option>
                 <option>S</option>
+                <option>Z</option>
+                <option>I</option>
+                <option>Around the World</option>
+                <option>Diamond</option>
                 <option>Special</option>
               </select>
             </div>
