@@ -136,7 +136,7 @@ export default function BingoPage() {
               <label>Auto‐call (sec):</label>
               <input
                 type="range"
-                min="5"
+                min="3"
                 max="20"
                 step="1"
                 value={callDelay}
