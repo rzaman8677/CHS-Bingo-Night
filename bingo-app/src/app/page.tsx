@@ -125,8 +125,11 @@ export default function BingoPage() {
               >
                 <option>Regular</option>
                 <option>X</option>
-                <option>H</option>
                 <option>Blackout</option>
+                <option>C</option>
+                <option>H</option>
+                <option>S</option>
+                <option>Special</option>
               </select>
             </div>
             <div className={styles.settingsLine}>
