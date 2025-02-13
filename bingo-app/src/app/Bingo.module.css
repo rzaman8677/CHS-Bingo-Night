@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .previousCalls {
@@ -23,16 +24,17 @@
   left: 1rem;
   display: flex;
   gap: 1rem;
+  transition: opacity 0.3s ease;
 }
 
 .prevCircle {
   width: 4vw;
   height: 4vw;
-  min-width: 50px; 
+  min-width: 50px;
   min-height: 50px;
-  max-width: 80px; 
+  max-width: 80px;
   max-height: 80px;
-  background-color: rgba(201, 7, 7, 0.658); 
+  background-color: rgba(201, 7, 7, 0.658);
   border-radius: 50%;
   color: rgb(255, 254, 251);
   font-weight: bold;
@@ -40,6 +42,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: popIn 0.5s ease;
 }
 
 .currentCircle {
@@ -58,6 +62,8 @@
   align-items: center;
   justify-content: center;
   margin-top: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: popIn 0.5s ease;
 }
 
 .settingsToggle {
@@ -66,6 +72,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .settingsPanel {
@@ -79,6 +86,7 @@
   color: rgb(255, 254, 251);
   width: 250px;
   border-radius: 4px;
+  transition: opacity 0.3s ease;
 }
 
 .settingsLine {
@@ -113,6 +121,7 @@
   font-weight: bold;
   cursor: pointer;
   border-radius: 3px;
+  transition: background-color 0.3s ease;
 }
 
 .settingsButtons button:hover {
@@ -127,6 +136,7 @@
   gap: 0.2vw;
   padding: 0.5rem;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 .boardCell {
@@ -143,6 +153,7 @@
   width: 100%;
   height: 90%;
   margin: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .boardCellCalled {
@@ -158,6 +169,7 @@
   width: 100%;
   height: 90%;
   margin: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .gameModeDisplay {
@@ -171,4 +183,16 @@
   padding: 0.5rem 1rem;
   border-radius: 5px;
   box-shadow: 0 0 8px #000;
+  transition: transform 0.3s ease;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
